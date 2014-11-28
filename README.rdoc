@@ -1,0 +1,21 @@
+== Entitizer
+
+Entitizer is a very basic command-line tool to batch encode or decode html
+entities in all files in a directory.
+
+== Usage
+
+To encode:
+
+  ./bin/entitizer /path/to/files/
+
+To decode:
+
+  ./bin/entitizer -d /path/to/files/
+
+Output files will have the same names and be created in an 'out' subdir of the
+path given on invocation.
+
+== TODO
+
+Lots. Should add some tests and exception handling...

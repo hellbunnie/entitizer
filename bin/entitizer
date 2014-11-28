@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/entitizer"
+
+begin
+  Entitizer::Application.new(ARGV).run
+rescue Errno::ENOENT => err
+  abort "entitizer: #{err.message}"
+rescue OptionParser::InvalidOption => err
+  abort "entitizer: #{err.message}\nusage: entitizer -d|-e <dir>"
+end
